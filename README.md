@@ -11,10 +11,8 @@ A simple Bash script to quickly switch your system DNS servers to popular provid
 * Supports public and local DNS:
 
   * Shecan
-  * Radar
   * Electro
   * DNS Pro
-  * 403
   * Begzar
   * Google
   * Cloudflare
