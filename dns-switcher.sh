@@ -106,7 +106,11 @@ main() {
         provider="${providers[$((choice - 1))]}"
         backup_resolv
         update_resolv "$provider" "${dns_servers[$provider]}"
-        systemctl restart systemd-resolved
+
+        if systemctl is-active --quiet systemd-resolved; then
+            systemctl restart systemd-resolved
+        fi
+        
         show_current
         break
     done
